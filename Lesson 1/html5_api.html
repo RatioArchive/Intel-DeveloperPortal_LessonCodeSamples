@@ -1,0 +1,80 @@
+/* Video */
+<video controls autoplay preload loop allowFullScreen poster="videoframe.jpg">
+	<source src="video.ogv">
+	<source src="video.mp4">
+	video not supported
+</video>
+
+
+/* History */
+<script>
+	window.history.back();
+	window.history.forward();
+	window.history.go(-1);
+
+	window.history.pushState(
+		{ 
+			key: value
+		},
+		'Title',
+		'title.html'
+	);
+
+	window.onpopstate = function(e) {
+		// event fires when pushState changes from forward or backward
+	}
+</script>
+
+
+/* 
+	Capture Video/Audio from Device 
+	http://www.html5rocks.com/en/tutorials/getusermedia/intro/
+*/
+<video autoplay></video>
+<script>
+  var onFailSoHard = function(e) {
+    console.log('Reeeejected!', e);
+  };
+
+  // Not showing vendor prefixes.
+  navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
+    var video = document.querySelector('video');
+    video.src = window.URL.createObjectURL(localMediaStream);
+
+    // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
+    // See crbug.com/110938.
+    video.onloadedmetadata = function(e) {
+      // Ready to go. Do some stuff.
+    };
+  }, onFailSoHard);
+</script>
+
+
+/* Web Workers */
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Worker example: One-core computation</title>
+ </head>
+ <body>
+  <p>The highest prime number discovered so far is: <output id="result"></output></p>
+  <script>
+   var worker = new Worker('worker.js');
+   worker.onmessage = function (event) {
+     document.getElementById('result').textContent = event.data;
+   };
+  </script>
+ </body>
+</html>
+<script>
+	// this is a separate file: worker.js
+	var n = 1;
+	search: while (true) {
+	  n += 1;
+	  for (var i = 2; i <= Math.sqrt(n); i += 1)
+	    if (n % i == 0)
+	     continue search;
+	  // found a prime!
+	  postMessage(n);
+	}
+</script>
