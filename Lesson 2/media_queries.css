@@ -1,0 +1,49 @@
+@media screen {
+    body {
+        width: 75%;
+    }
+}
+
+@media print {
+    body {
+        width: 100%;
+    }
+}
+
+/* Widescreen */
+@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { 
+    body {
+        width: 100%;
+    }
+}
+
+/* Handheld width */
+@media (max-device-width: 720px) {
+    body {
+        width: 100%;
+    }
+}
+
+/* Both computer and handheld width */
+@media (min-width: 1024px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        width:100%;
+    }   
+}
+
+@media (orientation: landscape) {
+    body {
+        width:100%;
+    }   
+}
+
+@media (min-resolution: 300dpi) {
+
+}
+
