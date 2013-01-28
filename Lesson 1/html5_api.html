@@ -9,9 +9,25 @@
 /* Geolocation API */
 <script>
 
-	navigator.geolocation.getCurrentPosition( function(position) {
-		console.log(position);
-	});
+	navigator.geolocation.getCurrentPosition( 
+		function(position) {
+
+			var latitude 	= position.coords.latitude,
+	  			longitude 	= position.coords.longitude,
+	  			altitude 	= position.coords.altitude,
+	  			accuracy 	= position.coords.accuracy,
+	  			heading 	= position.coords.heading,
+	  			speed 		= position.coords.speed,
+	  			timestamp 	= position.timestamp;
+
+	  			// ready to do cool stuff!
+
+		}, 
+		
+		function(error) {
+			console.log('error: ' + error);
+		}
+	);
 
 </script>
 
