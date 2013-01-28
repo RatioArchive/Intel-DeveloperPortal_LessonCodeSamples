@@ -1,0 +1,22 @@
+/* 
+	Box Shadow: x offset, y offset, blur, spread (optional), color; 
+*/
+.box-shadow {
+	box-shadow: 0 0 10px black;
+}
+.multiple-box-shadow {
+	box-shadow: 1px 1px 1px white, -1px -1px 1px black;
+}
+.box-shadow-width-opacity-and-spread {
+	box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.3);
+}
+
+/* 
+	Text Shadow: x offset, y offset, blur, color; 
+*/
+.text-shadow {
+	text-shadow: 0 1px 0 white;
+}
+.multiple-text-shadow {
+	text-shadow: 1px 1px 0 white, -1px -1px 0 black;
+}

@@ -1,0 +1,15 @@
+.flex-container {
+	display: flex;
+}
+
+.flex {
+	flex: 1;
+}
+
+.flex-double {
+	flex: 2;
+}
+
+.flex-vertical {
+	box-orient: vertical;
+}

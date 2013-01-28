@@ -1,0 +1,55 @@
+/* Transitions */
+.transition-all {
+/* 
+	Transition between all CSS properties when changed,
+	the transition will last 0.2 seconds
+	use the ease-out easing curve, so it starts slow and ends zippy fast
+	wait 0 seconds to start the animation
+*/
+	transition: all 0.2s ease-out 0s;
+}
+
+.transition-height {
+	transition: height 0.3s ease-in;
+}
+.transition-opacity {
+	transition: opacity 0.4s;	
+} 
+.transition-color {
+	transition: color 1s ease-in-out;
+}
+
+
+/* Animations */
+.animation-spin {
+	animation: spin 2s linear 0s infinite;
+}
+@keyframes spin {
+	from {
+		transform: rotateX(0deg);
+	}
+	to {
+		transform: rotateX(360deg);
+	}
+}
+
+.animation-control {
+	animation: in-out 5s ease-out;
+}
+@keyframes in-out {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(100%);
+	}
+	50% {
+		transform: translateX(50%);
+	}
+	75% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
