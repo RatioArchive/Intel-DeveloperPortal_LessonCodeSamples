@@ -6,7 +6,17 @@
 </video>
 
 
-/* History */
+/* Geolocation API */
+<script>
+
+	navigator.geolocation.getCurrentPosition( function(position) {
+		console.log(position);
+	});
+
+</script>
+
+
+/* History API */
 <script>
 	window.history.back();
 	window.history.forward();
@@ -32,21 +42,44 @@
 */
 <video autoplay></video>
 <script>
-  var onFailSoHard = function(e) {
-    console.log('Reeeejected!', e);
-  };
+	var captureSettings = { 
+		  video: true
+		, audio: true
+	}
 
-  // Not showing vendor prefixes.
-  navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
-    var video = document.querySelector('video');
-    video.src = window.URL.createObjectURL(localMediaStream);
+	navigator.getUserMedia(
+		captureSettings, 
+		onSuccessSoHard, 
+		onFailSoHard
+	)
 
-    // Note: onloadedmetadata doesn't fire in Chrome when using it with getUserMedia.
-    // See crbug.com/110938.
-    video.onloadedmetadata = function(e) {
-      // Ready to go. Do some stuff.
-    };
-  }, onFailSoHard);
+	var onFailSoHard = function(e) {
+		console.log('Reeeejected!', e);
+	}
+
+	var onSuccessSoHard = function(e) {
+		var video = document.querySelector('video');
+		video.src = window.URL.createObjectURL(localMediaStream);
+
+		video.onloadedmetadata = function(e) {
+		  // Ready to go. Do some stuff.
+		};
+	}
+</script>
+
+
+/* Fullscreen API */
+<script type="text/javascript">
+
+	function launchFullScreen(element) {
+	  if(element.requestFullScreen) {
+	    element.requestFullScreen();
+	  } 
+	}
+
+	launchFullScreen(document.documentElement); 				// the whole page
+	launchFullScreen(document.getElementById("videoElement")); 	// any individual element
+
 </script>
 
 
@@ -59,14 +92,17 @@
  <body>
   <p>The highest prime number discovered so far is: <output id="result"></output></p>
   <script>
+
    var worker = new Worker('worker.js');
    worker.onmessage = function (event) {
      document.getElementById('result').textContent = event.data;
    };
+
   </script>
  </body>
 </html>
 <script>
+
 	// this is a separate file: worker.js
 	var n = 1;
 	search: while (true) {
@@ -77,4 +113,5 @@
 	  // found a prime!
 	  postMessage(n);
 	}
+
 </script>
