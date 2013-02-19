@@ -1,0 +1,5 @@
+safe: true
+source: https://github.com/RatioInteractive/Intel-DeveloperPortal_LessonCodeSamples/tree/gh-pages
+destination: /
+lsi: false
+pygments: true
