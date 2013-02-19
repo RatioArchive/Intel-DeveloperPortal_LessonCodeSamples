@@ -1,4 +1,5 @@
 # Intel Developer Portal → Lesson Code Samples  
+[Sweet Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/)
 
 ## Lesson 1
 #### What is HTML5 → [Slides](http://www.rvl.io/nerdydork/lesson-1)
