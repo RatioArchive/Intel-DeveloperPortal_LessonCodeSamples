@@ -1,19 +1,3 @@
-// append an input to the body of the document
-
-var   docfrag 			= document.createDocumentFragment()
-	, filesystem_input 	= document.createElement('input');
-
-filesystem_input.setAttribute('id', 'filedemo');	
-filesystem_input.setAttribute('type', 'file');		
-filesystem_input.setAttribute('multiple', '');		// set multiple to allow selection of more than 1 file
-
-docfrag.appendChild(filesystem_input);
-document.getElementById('FileSystem').querySelector('.span8').appendChild(docfrag);
-
-
-
-
-
 // listen for changes on our input, change means files have been selected
 // source: http://www.html5rocks.com/en/tutorials/file/filesystem/
 
