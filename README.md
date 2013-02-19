@@ -3,3 +3,4 @@
  - HTML5 Boilerplate
  - Twitter Bootstrap
  - jQuery
+ - Prism - @leaverou
