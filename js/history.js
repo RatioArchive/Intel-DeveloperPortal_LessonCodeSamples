@@ -32,7 +32,11 @@ $(function() {
 
 	$(window).on('popstate', function(e) {
 
-		$('#History').prepend('<div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Popped!</strong> State has changed.</div>');
+		$('#History').prepend(
+			'<div class="alert alert-info"> \
+				<button type="button" class="close" data-dismiss="alert">&times;</button> \
+				<strong>Popped!</strong> State has changed. \
+			</div>');
 
 	});
 

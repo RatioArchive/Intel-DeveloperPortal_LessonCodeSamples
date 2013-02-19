@@ -15,6 +15,7 @@
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="https://raw.github.com/LeaVerou/prism/gh-pages/prism-dark.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -53,9 +54,11 @@
             <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
                 <h1>Hello Developer!</h1>
-                <p>This is a demo website built to showcase HTML5 technologies and make the code available for free. Take a look around.
-                    Learn a ton more at the Intel Developer Portal.</p>
-                <p><a href="http://software.intel.com/en-us/appup" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+                <br>
+                <p>This is a demo website built to showcase HTML5 technologies and make the code available for free. Take a look around, and make sure you're using Chrome or Safari, this is a webkit centric demo page.</p>
+                <br>
+                <p>There's more at the <b>Intel Developer Portal</b>.
+                <a href="http://software.intel.com/en-us/appup" class="btn btn-primary btn-large">Check it out &raquo;</a></p>
             </div>
 
             <hr>
@@ -67,10 +70,10 @@
                 </div>
                 <div class="span8">
                     <div class="btn-group">
-                      <button id="PushState" class="btn btn-large"><i class="icon-play"></i></button>
-                      <button id="BackwardState" class="btn btn-large"><i class="icon-chevron-left"></i></button>
-                      <button id="ForwardState" class="btn btn-large"><i class="icon-chevron-right"></i></button>
-                      <button id="ClearState" class="btn btn-large"><i class="icon-remove"></i></button>
+                      <button id="PushState" class="btn btn-large tt" title="push a state into the URL"><i class="icon-play"></i></button>
+                      <button id="BackwardState" class="btn btn-large tt" title="go back"><i class="icon-chevron-left"></i></button>
+                      <button id="ForwardState" class="btn btn-large tt" title="go forward"><i class="icon-chevron-right"></i></button>
+                      <button id="ClearState" class="btn btn-large tt" title="clear"><i class="icon-remove"></i></button>
                     </div>
                 </div>
             </div>
@@ -80,9 +83,12 @@
             <div class="row" id="Storage">
                 <h1>Storage</h1>
                 <div class="span4">
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>This code is awesomely easy. Store any key value pair you want, and use up to 5mb of storage.</p>
+                    window.localStorage['inteldemo'] = $('#StorageDemoInput').value();
                 </div>
                 <div class="span8">
+                    <input type="text" x-webkit-speech speech id="StorageDemoInput" placeholder="Say something.." />
+                    <br>
                     <a id="PushStorage" class="btn btn-large">Push Into Storage</a>
                 </div>
             </div>
@@ -165,7 +171,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
+        <script src="https://raw.github.com/LeaVerou/prism/gh-pages/prism.js"></script>
         <script src="js/main.js"></script>
 
         <script src="js/file_system.js"></script>
@@ -175,6 +181,5 @@
         <script src="js/device_camera.js"></script>
         <script src="js/geolocation.js"></script>
         <script src="js/web_worker.js"></script>
-        <script src="js/offline.js"></script>
     </body>
 </html>

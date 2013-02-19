@@ -1,5 +1,10 @@
 $(function(){
 	$('#navbar').scrollspy();
+	$('.tt').tooltip({
+		delay: 0,
+		trigger: 'hover',
+		placement: 'top'
+	});
 
 	$('#SpawnWorker').on('click', function() {
 		var worker = new Worker('web_worker.js');
