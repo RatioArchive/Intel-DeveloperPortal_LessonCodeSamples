@@ -37,6 +37,15 @@ pre code[class*="language-"] {
 	margin-left:20px;
 }
 
+input[type=file] {
+	opacity: 0;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
 @media (max-width:978px) {
 	#Home > li > a {
 		border-radius: 5px;

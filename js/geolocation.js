@@ -18,7 +18,7 @@ $(function() {
 	  			$('#GPS').prepend(
 					'<div class="alert alert-info"> \
 						<button type="button" class="close" data-dismiss="alert">&times;</button> \
-						<strong>Location Requested!</strong> Your latitude: '+latitude+', longitude: '+longitude+'. You are facing '+heading+'. \
+						<strong>Location Requested!</strong> Your latitude: '+latitude+', longitude: '+longitude+'. \
 					</div>');
 
 			}, 

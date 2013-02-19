@@ -96,10 +96,13 @@
                 <h1>File System</h1>
                 <div class="span4">
                     <p>By giving an input element type "file," you unlock access to a user's file system. This is huge for HTML. If you put the multiple attribute on the element, user's can select multiple items.</p>
-                    <p>Drag and drop components take advantage of this input type, but disguise it behind a bigger drag area.</p>
+                    <p>Drag and drop components take advantage of this input type, but disguise it behind a bigger drag area. This one isn't ready for drag and drop just yet.</p>
                 </div>
                 <div class="span8">
-                    <input type="file" multiple id="filedemo" class="btn btn-large"/>
+                    <div class="btn btn-large" style="position:relative;">
+                        <i class="icon-folder-open"></i> Open File System
+                        <input type="file" multiple id="filedemo"/>
+                    </div>
                 </div>
 
                 <div class="span12 code">
