@@ -32,6 +32,13 @@ pre code[class*="language-"] {
 	margin:0 !important;
 }
 
-#navbar a {
+.navbar-inner > a.brand,
+#Home > li > a:first-child {
 	margin-left:20px;
+}
+
+@media (max-width:978px) {
+	#Home > li > a {
+		border-radius: 5px;
+	}
 }
