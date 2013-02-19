@@ -42,7 +42,6 @@
                             <li><a href="#DeviceCamera">Device Camera</a></li>
                             <li><a href="#GPS">GPS</a></li>
                             <li><a href="#WebWorkers">Web Workers</a></li>
-                            <li><a href="#Offline">Offline</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -68,8 +67,10 @@
                 </div>
                 <div class="span8">
                     <div class="btn-group">
-                      <button id="PushState" class="btn btn-large">Push</button>
-                      <button id="ClearState" class="btn btn-large">Clear</button>
+                      <button id="PushState" class="btn btn-large"><i class="icon-play"></i></button>
+                      <button id="BackwardState" class="btn btn-large"><i class="icon-chevron-left"></i></button>
+                      <button id="ForwardState" class="btn btn-large"><i class="icon-chevron-right"></i></button>
+                      <button id="ClearState" class="btn btn-large"><i class="icon-remove"></i></button>
                     </div>
                 </div>
             </div>
@@ -94,7 +95,7 @@
                     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
                 <div class="span8">
-                    <input type="file" multiple id="filedemo"/>
+                    <input type="file" multiple id="filedemo" class="btn btn-large"/>
                 </div>
             </div>
 
@@ -106,7 +107,7 @@
                     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
                 <div class="span8">
-                    
+                    <canvas id="canvas" width="250" height="250"></canvas>
                 </div>
             </div>
 
@@ -118,7 +119,10 @@
                     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
                 <div class="span8">
-                    
+                    <a id="getCameraData" class="btn btn-large">Show Camera Data</a>
+                    <video id="cameraVideo" autoplay></video>
+                    <img id="cameraImg" src="">
+                    <canvas id="cameraCanvas" style="display:none;"></canvas>
                 </div>
             </div>
 
@@ -130,7 +134,7 @@
                     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
                 <div class="span8">
-                    
+                    <a id="GetLocation" class="btn btn-large">Log Your Location</a>
                 </div>
             </div>
 
@@ -142,19 +146,10 @@
                     <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 </div>
                 <div class="span8">
-                    
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row" id="Offline">
-                <h1>Offline</h1>
-                <div class="span4">
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-                <div class="span8">
-                    
+                    <a class="btn btn-large" onclick="sayHI()">Say HI</a>
+                    <a class="btn btn-large" onclick="unknownCmd()">Send unknown command</a>
+                    <a class="btn btn-large" onclick="stop()">Stop worker</a>
+                    <output id="result"></output>
                 </div>
             </div>
 

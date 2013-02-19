@@ -2,22 +2,32 @@ $(function() {
 
 	$('#PushState').on('click', function(e) {
 
-		window.history.pushState({
-			id: 	'PushState', 
-			title: 	'PushState is Cool',
-			url: 	'/pushstate'
-		});
+		window.history.pushState(
+			{ 
+				key: 'value'
+			},
+			'PushState is Cool',
+			'pushstate.html'
+		);
 
 	});
 
 	$('#ClearState').on('click', function(e) {
 		
-		window.history.pushState({
-			id: 	'', 
-			title: 	'',
-			url: 	''
-		});
+		window.history.pushState(
+			{},
+			'',
+			''
+		);
 
+	});
+
+	$('#ForwardState').on('click', function(e) {
+		window.history.forward();
+	});
+
+	$('#BackwardState').on('click', function(e) {
+		window.history.back();
 	});
 
 	$(window).on('popstate', function(e) {
