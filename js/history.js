@@ -7,7 +7,7 @@ $(function() {
 				key: 'value'
 			},
 			'PushState is Cool',
-			'pushstate.html'
+			'pushstate'
 		);
 
 	});

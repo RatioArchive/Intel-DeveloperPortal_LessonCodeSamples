@@ -3,62 +3,44 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>Intel & Ratio Interactive - HTML5 API's Demo</title>
+        <meta name="description" content="This is a demo website built to showcase HTML5 technologies and make the code available for free. Take a look around, and make sure you're using Chrome or Safari, this is a webkit centric demo page.">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="https://raw.github.com/LeaVerou/prism/gh-pages/prism-dark.css">
+        <link rel="stylesheet" href="css/prism.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body data-spy="scroll" data-target=".navbar">
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
         <div id="navbar" class="navbar navbar-fixed-top">
-            <div class="navbar-inner" id="Home">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">HTML5 JavaScript API's</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#Home">Home</a></li>
-                            <li><a href="#History">History</a></li>
-                            <li><a href="#Storage">Storage</a></li>
-                            <li><a href="#FileSystem">File System</a></li>
-                            <li><a href="#Canvas">Canvas</a></li>
-                            <li><a href="#DeviceCamera">Device Camera</a></li>
-                            <li><a href="#GPS">GPS</a></li>
-                            <li><a href="#WebWorkers">Web Workers</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
+            <div class="navbar-inner">
+                <a class="brand" href="#">HTML5 JavaScript API's</a>
+                <ul class="nav" id="Home">
+                    <li class="active"><a href="#Home">Home</a></li>
+                    <li><a href="#History">History</a></li>
+                    <li><a href="#Storage">Storage</a></li>
+                    <li><a href="#FileSystem">File System</a></li>
+                    <li><a href="#Canvas">Canvas</a></li>
+                    <li><a href="#DeviceCamera">Device Camera</a></li>
+                    <li><a href="#GPS">GPS</a></li>
+                    <li><a href="#WebWorkers">Web Workers</a></li>
+                </ul>
             </div>
         </div>
 
         <div class="container">
 
-            <!-- Main hero unit for a primary marketing message or call to action -->
             <div class="hero-unit">
                 <h1>Hello Developer!</h1>
                 <br>
                 <p>This is a demo website built to showcase HTML5 technologies and make the code available for free. Take a look around, and make sure you're using Chrome or Safari, this is a webkit centric demo page.</p>
                 <br>
-                <p>There's more at the <b>Intel Developer Portal</b>.
-                <a href="http://software.intel.com/en-us/appup" class="btn btn-primary btn-large">Check it out &raquo;</a></p>
+                <p>There's more at the <b>Intel Developer Portal</b>
+                <a href="http://software.intel.com/en-us/appup" class="btn btn-primary btn-large">Check it out <i class="icon-chevron-right"></i></a></p>
             </div>
 
             <hr>
@@ -76,6 +58,18 @@
                       <button id="ClearState" class="btn btn-large tt" title="clear"><i class="icon-remove"></i></button>
                     </div>
                 </div>
+
+                <div class="span12 code">
+                    <pre>
+<code class="language-javascript">window.history.pushState(
+    { 
+        key:    'value',
+        key2:   'value2'
+    },
+    'PushState is Cool',
+    'pushstate'
+);</code></pre>
+                </div>
             </div>
 
             <hr>
@@ -84,12 +78,15 @@
                 <h1>Storage</h1>
                 <div class="span4">
                     <p>This code is awesomely easy. Store any key value pair you want, and use up to 5mb of storage.</p>
-                    window.localStorage['inteldemo'] = $('#StorageDemoInput').value();
                 </div>
                 <div class="span8">
-                    <input type="text" x-webkit-speech speech id="StorageDemoInput" placeholder="Say something.." />
+                    <input type="text" x-webkit-speech speech spelling id="StorageDemoInput" placeholder="Say something.." />
                     <br>
-                    <a id="PushStorage" class="btn btn-large">Push Into Storage</a>
+                    <a id="PushStorage" class="btn btn-large"><i class="icon-plus"></i> to localStorage</a>
+                </div>
+
+                <div class="span12 code">
+                    <pre><code class="language-javascript">window.localStorage['inteldemo'] = $('#StorageDemoInput').val();</code></pre>
                 </div>
             </div>
 
@@ -98,10 +95,23 @@
             <div class="row" id="FileSystem">
                 <h1>File System</h1>
                 <div class="span4">
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>By giving an input element type "file," you unlock access to a user's file system. This is huge for HTML. If you put the multiple attribute on the element, user's can select multiple items.</p>
+                    <p>Drag and drop components take advantage of this input type, but disguise it behind a bigger drag area.</p>
                 </div>
                 <div class="span8">
                     <input type="file" multiple id="filedemo" class="btn btn-large"/>
+                </div>
+
+                <div class="span12 code">
+                    <pre class="language-markup"><code class="language-markup">// HTML
+< input type="file" multiple id="filedemo" class="btn btn-large"/></code></pre>
+                    <pre><code class="language-javascript">// JS
+window.requestFileSystem(window.TEMPORARY, 1024*1024, function(fs) {
+    // Duplicate each file the user selected to the app's filesystem.
+    for (var i = 0, file; file = files[i]; ++i) {
+        .. do cool stuff
+    }
+}, errorHandler);</code></pre>
                 </div>
             </div>
 
@@ -110,10 +120,24 @@
             <div class="row" id="Canvas">
                 <h1>Canvas</h1>
                 <div class="span4">
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>The canvas element allows animators, game artists, and other 2D and 3D professionals access to a familiar API that enabled them to animate and draw anything they like!</p>
+                    <p>This developer <a href="http://codepen.io/jackrugile/pen/organic_circle_canvas_loader">jackrugile</a> created an organic spinning animation with javascript and the canvas. Pretty coo.</p>
                 </div>
                 <div class="span8">
                     <canvas id="canvas" width="250" height="250"></canvas>
+                </div>
+
+                <div class="span12 code">
+                    <pre><code class="language-javascript">self.init = function(){    
+    self.canvas             = document.getElementById('canvas');                
+    self.ctx                = self.canvas.getContext('2d');
+    self.ctx.lineWidth      = .5;
+    self.ctx.strokeStyle    = 'rgba(0,0,0,.75)';
+    self.count              = 75;
+    self.rotation           = 270*(Math.PI/180);      
+    self.speed              = 6;
+    self.canvasLoop();
+};    </code></pre>
                 </div>
             </div>
 
@@ -130,6 +154,28 @@
                     <img id="cameraImg" src="">
                     <canvas id="cameraCanvas" style="display:none;"></canvas>
                 </div>
+
+                <div class="span12 code">
+                    <pre><code class="language-javascript">  var getDataBtn        = $('#getCameraData'),
+      video             = $('#cameraVideo'),
+      canvas            = $('#cameraCanvas'),
+      ctx               = canvas.getContext('2d'),
+      localMediaStream  = null;
+
+  video.on('click', function(e) {
+    if (localMediaStream) {
+      ctx.drawImage(video, 0, 0);
+      $('#cameraImg').src = canvas.toDataURL('image/webp');
+    }
+  });
+
+  getDataBtn.on('click', function(e) {
+    navigator.webkitGetUserMedia({video: true}, function(stream) {
+      video.src = window.URL.createObjectURL(stream);
+      localMediaStream = stream;
+    });
+  });</code></pre>
+                </div>
             </div>
 
             <hr>
@@ -142,6 +188,32 @@
                 <div class="span8">
                     <a id="GetLocation" class="btn btn-large">Log Your Location</a>
                 </div>
+
+                <div class="span12 code">
+                    <pre><code class="language-javascript">navigator.geolocation.getCurrentPosition( 
+
+    function(position) {
+
+        var latitude    = position.coords.latitude,
+            longitude   = position.coords.longitude,
+            altitude    = position.coords.altitude,
+            accuracy    = position.coords.accuracy,
+            heading     = position.coords.heading,
+            speed       = position.coords.speed,
+            timestamp   = position.timestamp;
+
+            // ready to do cool stuff!
+
+        console.log(position);
+
+    }, 
+    
+    function(error) {
+        console.log('error: ' + error);
+    }
+    
+);</code></pre>
+                </div>
             </div>
 
             <hr>
@@ -149,13 +221,31 @@
             <div class="row" id="WebWorkers">
                 <h1>Web Workers</h1>
                 <div class="span4">
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>Web workers are awesome if you're UI thread is getting bogged down with activity. Send your AJAX requests or other in/out type operations to another thread, your Web Worker.</p>
+                    <p>This example gives you buttons to send commands to the web worker. The commands are sent via postMessage().</p>
                 </div>
                 <div class="span8">
-                    <a class="btn btn-large" onclick="sayHI()">Say HI</a>
-                    <a class="btn btn-large" onclick="unknownCmd()">Send unknown command</a>
-                    <a class="btn btn-large" onclick="stop()">Stop worker</a>
+                    <a class="btn" onclick="sayHI()"><i class="icon-pencil"></i> Say Hi</a>
+                    <a class="btn" onclick="unknownCmd()">Send <i class="icon-question-sign"></i> Command</a>
+                    <a class="btn" onclick="stop()"><i class="icon-stop"></i> Stop Worker</a>
                     <output id="result"></output>
+                </div>
+
+                <div class="span12 code">
+                    <pre><code class="language-javascript">self.addEventListener('message', function(e) {
+  var data = e.data;
+  switch (data.cmd) {
+    case 'start':
+      self.postMessage('WORKER STARTED: ' + data.msg);
+      break;
+    case 'stop':
+      self.postMessage('WORKER STOPPED: ' + data.msg + '. (buttons will no longer work)');
+      self.close(); // Terminates the worker.
+      break;
+    default:
+      self.postMessage('Unknown command: ' + data.msg);
+  };
+}, false);</code></pre>
                 </div>
             </div>
 
@@ -165,13 +255,13 @@
                 <p>&copy; Ratio Interactive & Intel 2013</p>
             </footer>
 
-        </div> <!-- /container -->
+        </div>
 
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="https://raw.github.com/LeaVerou/prism/gh-pages/prism.js"></script>
+        <script src="js/prism.js"></script>
         <script src="js/main.js"></script>
 
         <script src="js/file_system.js"></script>

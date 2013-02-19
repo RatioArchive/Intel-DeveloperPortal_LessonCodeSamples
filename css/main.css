@@ -3,7 +3,40 @@
 	position:relative;
 }
 
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+body > .container {
+	margin-top:100px;
+}
+
 canvas {
   display: block;
   margin:-70px 50px 0 auto;
+}
+
+.code {
+	margin-top:50px;
+}
+
+pre {
+	display:inline-block;
+}
+
+pre code[class*="language-"] {
+	font-size:1.3em !important;
+	line-height: 1.4em;
+	padding:4px !important;
+	box-shadow: none;
+}
+
+#navbar {
+	position:fixed !important;
+	margin:0 !important;
+}
+
+#navbar a {
+	margin-left:20px;
 }
