@@ -6,7 +6,7 @@ $(function() {
       ctx               = canvas.getContext('2d'),
       localMediaStream  = null;
 
-  video.on('click', function(e) {
+  $(video).on('click', function(e) {
     if (localMediaStream) {
       ctx.drawImage(video, 0, 0);
       $('#cameraImg').src = canvas.toDataURL('image/webp');
