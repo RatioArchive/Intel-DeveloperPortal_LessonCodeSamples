@@ -8,7 +8,7 @@ $(function() {
 		$('#Storage').prepend(
 			'<div class="alert alert-success"> \
 				<button type="button" class="close" data-dismiss="alert">&times;</button> \
-				<strong>Success!</strong> Check your local storage! ' + inputVal + ' is in there! \
+				<strong>Success!</strong> Check your local storage! ' + inputVal + ' it\'s in there! \
 			</div>');
 
 	});
