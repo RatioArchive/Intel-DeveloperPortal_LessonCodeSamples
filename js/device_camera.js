@@ -9,7 +9,7 @@ $(function() {
   $(video).on('click', function(e) {
     if (localMediaStream) {
       ctx.drawImage(video, 0, 0);
-      $('#cameraImg').src = canvas.toDataURL('image/webp');
+      document.getElementById('cameraImg').src = canvas.toDataURL('image/webp');
     }
   });
 
