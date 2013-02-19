@@ -22,7 +22,7 @@ function unknownCmd() {
 	worker.postMessage({'cmd': 'foobard', 'msg': '???'});
 }
 
-var worker = new Worker('web_worker.js');
+var worker = new Worker('js/web_worker.js');
 worker.addEventListener('message', function(e) {
 	document.getElementById('result').textContent = e.data;
 }, false);
