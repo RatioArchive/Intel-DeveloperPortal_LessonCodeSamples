@@ -1,7 +1,7 @@
 $(function() {
 
   var getDataBtn        = $('#getCameraData'),
-      video             = $('#cameraVideo'),
+      video             = document.getElementById('cameraVideo'),
       canvas            = document.getElementById('cameraCanvas'),
       ctx               = canvas.getContext('2d'),
       localMediaStream  = null;

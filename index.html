@@ -146,10 +146,13 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, function(fs) {
             <div class="row" id="DeviceCamera">
                 <h1>Camera</h1>
                 <div class="span4">
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>Oh just click the demo, this speaks for itself! The code below is literally everything it took to make this work!</p>
                 </div>
                 <div class="span8">
                     <a id="getCameraData" class="btn btn-large">Show Camera Data</a>
+                </div>
+
+                <div class="span12 code">
                     <video id="cameraVideo" autoplay></video>
                     <img id="cameraImg" src="">
                     <canvas id="cameraCanvas" style="display:none;"></canvas>
@@ -157,8 +160,8 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, function(fs) {
 
                 <div class="span12 code">
                     <pre><code class="language-javascript">  var getDataBtn        = $('#getCameraData'),
-      video             = $('#cameraVideo'),
-      canvas            = $('#cameraCanvas'),
+      video             = document.getElementById('cameraVideo'),
+      canvas            = document.getElementById('cameraCanvas'),
       ctx               = canvas.getContext('2d'),
       localMediaStream  = null;
 
@@ -183,7 +186,7 @@ window.requestFileSystem(window.TEMPORARY, 1024*1024, function(fs) {
             <div class="row" id="GPS">
                 <h1>Geolocation</h1>
                 <div class="span4">
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>This is a really fun concept to think about: your phone having the ability to say where you are. All your searches default to your viscinity. It got really tedious always specifying my state or city in every search.</p>
                 </div>
                 <div class="span8">
                     <a id="GetLocation" class="btn btn-large">Log Your Location</a>

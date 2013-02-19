@@ -12,11 +12,6 @@ body > .container {
 	margin-top:100px;
 }
 
-canvas {
-  display: block;
-  margin:-70px 50px 0 auto;
-}
-
 .code {
 	margin-top:50px;
 }
