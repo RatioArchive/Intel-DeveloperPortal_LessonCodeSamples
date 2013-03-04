@@ -30,3 +30,13 @@
  - Web Workers
  - Sockets
  - File Systems
+
+
+
+## Lesson 4
+#### CSS3 Animations → [Slides](http://www.rvl.io/nerdydork/lesson-4)
+ - Single property transitions
+ - Multiple property transitions
+ - Keyframe animations
+ - Complex keyframe animations
+ - Infinite keyframe animations
