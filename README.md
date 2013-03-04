@@ -1,5 +1,5 @@
 # Intel Developer Portal → Lesson Code Samples  
-[Sweet Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/)
+[Sweet HTML5 Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/)
 
 ## Lesson 1
 #### What is HTML5 → [Slides](http://www.rvl.io/nerdydork/lesson-1)
@@ -22,6 +22,7 @@
 
 ## Lesson 3
 #### What is Javascript → [Slides](http://www.rvl.io/nerdydork/lesson-3)
+[Code Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/)
  - History
  - Storage
  - Canvas
