@@ -1,0 +1,39 @@
+/* 	
+	Simple keyframe animation example 
+	//////////////////////////////////////////////////////
+*/
+@+keyframes slidein { 
+     from { 
+           margin-left: 100%; 
+           width: 300% 
+     } 
+     to { 
+           margin-left: 0%; 
+           width: 100%; 
+     } 
+}
+
+
+
+
+/* 	
+	Infinite keyframe animation example
+	//////////////////////////////////////////////////////
+*/
+div {
+	width:100px; height:100px; 
+	background-color:red;
+	position:absolute;
+	
+	+animation: in_and_out 1s ease-in-out infinite;
+}
+
+@+keyframes in_and_out { 
+   0%     { }
+   50%    { 
+   		+transform: translateX(100px) rotateX(180deg); 
+   		width:200px; 
+   		background-color:orange; 
+   } 
+   100%   { } 
+}

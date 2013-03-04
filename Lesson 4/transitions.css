@@ -1,0 +1,75 @@
+/* 	
+	Initialize interpolation and transitions between properties 
+	//////////////////////////////////////////////////////
+*/
+.transition { 
+	+transition: all; 
+}
+
+
+
+
+
+
+/* 	
+	Using Classes for States: 
+	keep state and control animations  
+	//////////////////////////////////////////////////////
+*/
+
+div {
+/*  This initializes animation between height over 1 second  */
+	+transition: height 1s;
+}
+div.in {
+/*  When this element is in, it's height is 500px  */
+	height: 500px;
+}
+div.out {
+/*  When out, it has no height, so it's not visible  */
+	height: 0px;
+}
+
+
+
+
+
+
+/* 	
+	Multiple Properties: height, width, opacity, rotation; 
+	////////////////////////////////////////////////////// 
+*/
+div { +transition: all 0.5s; }
+div.in {
+    width:300px;
+    height:500px;
+} 
+div.out {
+    width:0; height:0;
+    opacity:0;
+    +transform: rotateY(-90deg);
+}
+
+
+
+/* 	
+	Multiple Properties with offset animation timing  
+	//////////////////////////////////////////////////////
+*/
+div { 
+/*  Animate height over 300 milliseconds, 
+	Animate width over 1 second, 
+	and opacity over half a second  */
+	+transition: 
+		height 	0.3s, 
+		width 	1s,
+		opacity 0.5s; 
+}
+div.in {
+    width:300px;
+    height:500px;
+} 
+div.out {
+    width:0; height:0;
+    opacity:0;
+}
