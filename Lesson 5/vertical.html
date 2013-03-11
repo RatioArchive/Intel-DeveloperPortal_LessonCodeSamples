@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox - Vertical Layout</title>
+	<style rel="stylesheet">
+
+		body { margin:0; }
+
+		.flexbox {
+		  display:flex;
+		  display:-webkit-flex;
+		  flex-flow:column;
+		  -webkit-flex-flow:column;
+		}
+		.flex1 { flex:1; -webkit-flex:1; }
+		.flex2 { flex:2; -webkit-flex:2; }
+		.flex3 { flex:3; -webkit-flex:3; }
+
+
+		article { height:400px; }
+		article > section { background-color:hsla(150, 60%, 60%, 1); }
+		article > aside { background-color:hsla(150, 60%, 80%, 1); }
+
+	</style>
+</head>
+<body>
+
+	<article class="flexbox">
+		<aside class="flex1"></aside>
+		<section class="flex3"></section>
+	</article>
+
+</body>
+</html>

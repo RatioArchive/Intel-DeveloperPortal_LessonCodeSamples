@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox - Orderable Layout</title>
+	<style rel="stylesheet">
+
+		body { margin:0; }
+
+		.flexbox {
+		  display:flex;
+		  display:-webkit-flex;
+		  flex-flow:row;
+		  -webkit-flex-flow:row;
+		}
+		.flex1 { flex:1; -webkit-flex:1; }
+		.flex2 { flex:2; -webkit-flex:2; }
+
+
+		article {
+		  height:400px;
+		}
+		article > section {
+		  background-color:hsla(150, 60%, 60%, 1);
+		  order:1;
+		  -webkit-order:1;
+		}
+		article > aside {
+		  background-color:hsla(150, 60%, 80%, 1);
+		  order:2;
+		  -webkit-order:2;
+		}
+
+
+		@media (min-width: 1024px) {
+		  .flex1 { order:1; -webkit-order:1; }
+		  .flex2 { order:2; -webkit-order:2; }
+		}
+
+	</style>
+</head>
+<body>
+
+	<article class="flexbox">
+		<aside class="flex1"></aside>
+		<section class="flex2"></section>
+	</article>
+
+</body>
+</html>

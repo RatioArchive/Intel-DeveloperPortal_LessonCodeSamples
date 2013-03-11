@@ -41,3 +41,12 @@
  - Keyframe animations
  - Complex keyframe animations
  - Infinite keyframe animations
+
+
+
+ ## Lesson 5
+#### Liquid Layout with Flexbox → [Slides](http://www.rvl.io/nerdydork/lesson-5)
+ - What is Flexbox
+ - Horizontal layouts
+ - Vertical layouts
+ - Orderable layouts
