@@ -50,3 +50,12 @@
  - Horizontal layouts
  - Vertical layouts
  - Orderable layouts
+
+
+
+ ## Lesson 6
+#### Comic Director Hub Title → [Slides](http://www.rvl.io/nerdydork/lesson-6)
+ - What is HTML semantics
+ - Good use of HTML5 elements
+ - Animate on hover
+ - Re-useable CSS
