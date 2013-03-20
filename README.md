@@ -59,3 +59,11 @@
  - Good use of HTML5 elements
  - Animate on hover
  - Re-useable CSS
+
+
+
+## Lesson 7
+#### HTML5 Video → [Slides](http://www.rvl.io/nerdydork/lesson-7)
+ - See how easy video can be
+ - Adjust video options
+ - Style it a bit
