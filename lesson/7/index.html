@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Video</title>
+	<style rel="stylesheet">
+		body { 
+			margin:0; 
+			font-family: sans-serif;
+		}
+
+		video {
+		  width:480px;
+		}
+
+		section {
+			min-height:700px;
+			height:100%;
+		}
+
+		.flexbox {
+		  display:flex;
+		}
+
+		.flex-center {
+		  margin:auto;
+		}
+
+		.radial-bg {
+		  background: radial-gradient(ellipse at center, hsla(180,100%,100%,1) 0%,hsla(0,0%,88%,1) 100%);
+		  background: -webkit-radial-gradient(center, ellipse cover, hsla(180,100%,100%,1) 0%,hsla(0,0%,88%,1) 100%);
+		}
+	</style>
+	<script type="text/javascript" src="http://secure.codepen.io/javascripts/libs/prefixfree.min.js"></script>
+</head>
+<body>
+
+	<section class="flexbox">
+
+		<video 
+			fullscreen 
+			controls 
+			src="https://d3914lnwxdoyzm.cloudfront.net/58e05c08eff243e7880c5e789fc7dfd2.m4v" 
+			poster="http://comicdirector.com/img/CD_Logo.png" 
+			class="flex-center radial-bg" 
+			preload
+			tabindex="0"
+		></video>
+
+	</section>
+
+</body>
+</html>

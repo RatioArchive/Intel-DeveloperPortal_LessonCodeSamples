@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox - Horizontal Layout</title>
+	<style rel="stylesheet">
+		body { 
+			margin:0; 
+			font-family: sans-serif;
+		}
+
+		.home-tile {
+		  width:500px;
+		  height:280px;
+		  position:relative;
+		  
+		  font-size: 1rem;
+		  
+		  margin:2rem 3rem;
+		  box-sizing:border-box;
+		  
+		  background-size:105% auto;
+		  background-position:center center;
+		  
+		  transition:transform 0.3s cubic-bezier(0.000, 0.380, 0.265, 1.550);
+		}
+
+		.home-tile:hover {
+		  transform:scale3d(1.05,1.05,1.05);
+		}
+
+		/* Comic Border Styles */
+		.comic-border {
+		  border:3px solid #222;
+		  box-shadow:5px 5px 0 #222;
+		  border-radius:3px 0;
+		}
+		.comic-border:before,
+		.comic-border:after {
+		  content:" ";
+		  position:absolute;
+		  width: 0; 
+			height: 0; 
+		}
+		.comic-border:before {
+		  border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 5px solid #222;
+		  
+		  bottom:-8px;
+		  left:-3px;
+		}
+		.comic-border:after {
+			border-left: 3px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 5px solid #222;
+		  
+		  top:-3px;
+		  right:-8px;
+		}
+
+		/* Inner Container Styles */
+		.likes { color:black; }
+		.views { color:#666; }
+		.author { font-size:0.9rem; }
+
+		.meta {
+		  position:absolute;
+		  bottom:30px;
+		  right:-30px;
+		  
+		  padding:5px;
+		  width:250px;
+		  
+		  background-color:white;
+		}
+
+		.comic-title {
+		  margin:0 0 5px 0;
+		  font-weight:lighter;
+		  text-transform:capitalize;
+		}
+
+		.meta-title-bar {
+		  padding-bottom:5px;
+		  display:flex;
+		  font-style:italic;
+		}
+
+		.meta-detail {
+		  padding:5px;
+		  color:white;
+		}
+
+		/* Reuseable */
+		.blue-bg {
+		  background-color:hsl(200, 50%, 60%);
+		}
+		.green-bg {
+		  background-color:hsl(80, 60%, 40%);
+		}
+		.red-bg {
+		  background-color:hsl(350, 80%, 40%);
+		}
+
+		.flex { flex:1; }
+		.tr { text-align:right; }
+	</style>
+	<script type="text/javascript" src="http://secure.codepen.io/javascripts/libs/prefixfree.min.js"></script>
+</head>
+<body>
+
+	<figure class="home-tile comic-border" style="background-image:url(https://d3914lnwxdoyzm.cloudfront.net/68050878e8754bf5a021fb8c9c0c37d9.png);">
+
+		<figcaption class="meta comic-border">
+
+			<div class="meta-title-bar">
+				<span class="likes flex">13 likes</span>
+				<span class="views flex tr">155 views</span>
+			</div>
+
+			<div class="meta-detail green-bg">
+				<h2 class="comic-title">Turtle revenge on mario</h2>
+				<small class="author">Adam Argyle</small>
+			</div>
+
+		</figcaption>
+
+	</figure>
+
+</body>
+</html>
