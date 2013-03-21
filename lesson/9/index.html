@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comic Director API</title>
+	<style rel="stylesheet">
+		body {overflow:hidden;}
+
+		.splash-layer {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			transition: transform 0.8s ease-in-out;
+			box-shadow: 0px 0px 25px rgba(0,0,0,.7);
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		    
+		.splash-layer:nth-child(1) { 
+			z-index: 7; 
+			background-image: url(http://s.cdpn.io/2585/splashscreen.png); 
+			background-color: #000; 
+			transform-origin: bottom left;
+			transform: rotate(-70deg) translateY(-100%);
+			transition-delay:1s;
+		}
+
+		.splash-layer:nth-child(2) { 
+			z-index: 6;
+			background-image: url(http://s.cdpn.io/2585/logo_2.png); 
+			background-color: #4FC2EB; 
+			transform-origin: bottom right; 
+			transform: rotate(70deg) translateX(100%) translateY(-100%);
+			transition-delay:1.5s;
+		}
+
+		.splash-layer:nth-child(3) { 
+			z-index: 5; 
+			background-image: url(http://s.cdpn.io/2585/logo_2.png); 
+			background-color: #EC5B07; 
+			transform-origin: bottom left; 
+			transform: rotate(-60deg) translateY(-110%);
+			transition-delay:2s;
+		}
+
+		.splash-layer:nth-child(4) { 
+			z-index: 4; 
+			background-image: url(http://s.cdpn.io/2585/logo_3.png); 
+			background-color: #ECE23B; 
+			transform-origin: bottom right; 
+			transform: rotate(70deg) translateX(100%) translateY(-100%);
+			transition-delay:2.5s;
+		}
+
+		.splash-layer:nth-child(5) { 
+			z-index: 3; 
+			background-image: url(http://s.cdpn.io/2585/logo_4.png); 
+			background-color: #AA53EC; 
+			transform-origin: bottom left; 
+			transform: rotate(-60deg) translateY(-110%);
+			transition-delay:3s;
+		}
+
+		.splash-layer:nth-child(6) { 
+			z-index: 2; 
+			background-image: url(http://s.cdpn.io/2585/logo_5.png); 
+			background-color: #77B727; 
+			transform-origin: bottom right; 
+			transform: rotate(70deg) translateX(100%) translateY(-100%);
+			transition-delay:3.5s;
+		}
+
+		.splash-layer:nth-child(7) { 
+			z-index: 1;
+			background-color: #EB2F3C; 
+			animation:blast_out 1.5s cubic-bezier(0,.60,0,1) 4.5s;
+			background-image: url(http://s.cdpn.io/2585/logo_6.png);
+		}
+
+		@keyframes blast_out {
+			from {}
+			to {
+				transform: scale3d(4,4,4) translateX(0) translateY(0);
+				opacity:0;
+			}
+		}
+	</style>
+	<script type="text/javascript" src="http://secure.codepen.io/javascripts/libs/prefixfree.min.js"></script>
+</head>
+<body>
+
+	<div class="splash-layer"></div>
+	<div class="splash-layer"></div>
+	<div class="splash-layer"></div>
+	<div class="splash-layer"></div>
+	<div class="splash-layer"></div>
+	<div class="splash-layer"></div>
+	<div class="splash-layer"></div>
+
+</body>
+</html>
