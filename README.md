@@ -75,3 +75,11 @@
  - How to ping API's with JavaScript XHR
  - Request a comic
  - Present the comic pulled
+
+
+
+## Lesson 9
+#### Comic Director Splash Animation → [Slides](http://www.rvl.io/nerdydork/lesson-9) || [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/9/)
+ - How we built that animation
+ - What the code looks like
+ - How to make one for yourself in the future
