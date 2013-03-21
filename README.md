@@ -54,8 +54,7 @@
 
 
 ## Lesson 6
-#### Comic Director Hub Title → [Slides](http://www.rvl.io/nerdydork/lesson-6)
-#### [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/6/)
+#### Comic Director Hub Title → [Slides](http://www.rvl.io/nerdydork/lesson-6) || [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/6/)
  - What is HTML semantics
  - Good use of HTML5 elements
  - Animate on hover
@@ -64,8 +63,7 @@
 
 
 ## Lesson 7
-#### HTML5 Video → [Slides](http://www.rvl.io/nerdydork/lesson-7)
-#### [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/7/)
+#### HTML5 Video → [Slides](http://www.rvl.io/nerdydork/lesson-7) || [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/7/)
  - See how easy video can be
  - Adjust video options
  - Style it a bit
@@ -73,8 +71,7 @@
 
 
 ## Lesson 8
-#### Comic Director API → [Slides](http://www.rvl.io/nerdydork/lesson-8)
-#### [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/8/)
+#### Comic Director API → [Slides](http://www.rvl.io/nerdydork/lesson-8) || [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/8/)
  - How to ping API's with JavaScript XHR
  - Request a comic
  - Present the comic pulled
