@@ -88,8 +88,8 @@
 		list.appendChild(chunk);
 	}
 
-	window.onload = function() {
-		listen();
-	}
+	document.addEventListener('DOMContentLoaded', function() {
+        listen();
+    });
 
 })()
