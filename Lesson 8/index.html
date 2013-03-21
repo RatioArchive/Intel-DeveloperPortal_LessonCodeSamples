@@ -17,10 +17,16 @@
 	</style>
 	<script type="text/javascript" src="http://secure.codepen.io/javascripts/libs/prefixfree.min.js"></script>
 	<script type="text/javascript" src="xhr.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 
-	<h1 id="apistatus"></h1>
+	<h3 id="apistatus">Waiting for your commands</h3>
+
+	<input id="limit" type="number" max="25" min="1" value="5" />
+	<button id="spotlight">Spotlight</button>
+	<button id="popular">Popular</button>
+	<button id="recent">Recent</button>
 
 	<dl id="list"></dl>
 
