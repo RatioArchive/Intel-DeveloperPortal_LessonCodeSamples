@@ -82,3 +82,10 @@
  - How we built that animation
  - What the code looks like
  - How to make one for yourself in the future
+
+
+
+## Lesson 10
+#### Raphael.js → [Slides](http://www.rvl.io/nerdydork/lesson-10) || [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/10/)
+ - A touch scale and rotate tool code
+ - SVG canvas
