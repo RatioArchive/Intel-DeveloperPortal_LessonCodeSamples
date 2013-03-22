@@ -21,8 +21,7 @@
 
 
 ## Lesson 3
-#### What is Javascript → [Slides](http://www.rvl.io/nerdydork/lesson-3)
-[Code Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/)
+#### What is Javascript → [Slides](http://www.rvl.io/nerdydork/lesson-3) || [Code Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/)
  - History
  - Storage
  - Canvas
