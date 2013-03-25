@@ -7,34 +7,36 @@ document.addEventListener('DOMContentLoaded', function() {
 	  , ww = window.innerWidth
 	  , wh = window.innerHeight;
 
-	// Creates canvas 320 × 200 at 10, 50
+	// Create full page svg canvas elem
 	paper = Raphael(
-		0, // x
-		0, // y
+		0,  // x
+		0,  // y
 		ww, // width
-		wh // height
+		wh  // height
 	);
 
-	// Creates image at x = 50, y = 40, with radius 10
+	// Creates image half the page size in the middle of the page
 	image = paper.image(
 		'logo.svg',
 		ww / 4,
 		wh / 4,
 		ww / 2,
 		wh / 2
-	);
-	image.attr({cursor:'pointer'});
+	).attr({cursor:'move'});
 
-	// here's the setting that comic director uses on it's svg canvas items
+	// here's the settings that comic director uses on it's svg canvas items
 	transformerOptions = {
 		keepRatio:  ['axisX','axisY'],
-        draw:       ['image'],
-        scale:      ['axisX', null],
-        rotate:     ['axisX', null],
-        drag:       [null, 'self']
+	        draw:       ['image'],
+	        scale:      ['axisX', null],
+	        rotate:     ['axisX', null],
+	        drag:       [null, 'self'],
+	        attrs: {
+	            cursor: "pointer"
+	        }
 	}
 
-	// set transform ability on the image with options
+	// set transform ability on the image with our options
 	transformer = paper.freeTransform(image, transformerOptions);
 
 });
