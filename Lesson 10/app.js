@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	// here's the settings that comic director uses on it's svg canvas items
 	transformerOptions = {
 		keepRatio:  ['axisX','axisY'],
-        draw:       ['image'],
-        scale:      ['axisX', null],
-        rotate:     ['axisX', null],
-        drag:       [null, 'self'],
-        attrs: {
-            cursor: "pointer"
-        }
+	        draw:       ['image'],
+	        scale:      ['axisX', null],
+	        rotate:     ['axisX', null],
+	        drag:       [null, 'self'],
+	        attrs: {
+	            cursor: "pointer"
+	        }
 	}
 
 	// set transform ability on the image with our options
