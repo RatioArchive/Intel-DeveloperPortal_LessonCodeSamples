@@ -44,7 +44,7 @@
 
 
 ## Lesson 5
-#### Liquid Layout with Flexbox → [Slides](http://www.rvl.io/nerdydork/lesson-5)
+#### Liquid Layout with Flexbox → [Slides](http://www.rvl.io/nerdydork/lesson-5) || [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/5/index.html)
  - What is Flexbox
  - [Horizontal layouts](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/5/horizontal.html)
  - [Vertical layouts](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/5/vertical.html)
