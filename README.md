@@ -49,6 +49,7 @@
  - [Horizontal layouts](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/5/horizontal.html)
  - [Vertical layouts](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/5/vertical.html)
  - [Orderable layouts](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/5/orderable.html)
+ - [Scrollable layouts](http://codepen.io/argyleink/pen/Eaqec)
 
 
 
