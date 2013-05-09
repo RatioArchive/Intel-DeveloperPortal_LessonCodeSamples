@@ -11,6 +11,7 @@
 
 		video {
 		  width:480px;
+		  display: block;
 		}
 
 		section {
@@ -26,28 +27,56 @@
 		  margin:auto;
 		}
 
+		.video-wrap {
+			position:relative;
+		}
+
+		.flex-button-bar > a {
+			flex:1;
+
+			font-size: 1.5rem;
+			padding: 0.4rem 1rem;
+			background-color:hsla(200,50%,70%,0.9);
+
+			color:white;
+			text-align: center;
+		}
+
+		.flex-button-bar > a:not(:last-child) {
+			border-right:1px solid hsla(200,50%,80%,0.9);
+		}
+
 		.radial-bg {
 		  background: radial-gradient(ellipse at center, hsla(180,100%,100%,1) 0%,hsla(0,0%,88%,1) 100%);
 		  background: -webkit-radial-gradient(center, ellipse cover, hsla(180,100%,100%,1) 0%,hsla(0,0%,88%,1) 100%);
 		}
 	</style>
-	<script type="text/javascript" src="http://secure.codepen.io/javascripts/libs/prefixfree.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"></link>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 <body>
 
 	<section class="flexbox">
+		<div class="video-wrap flex-center">
 
-		<video 
-			fullscreen 
-			controls 
-			src="https://d3914lnwxdoyzm.cloudfront.net/58e05c08eff243e7880c5e789fc7dfd2.m4v" 
-			poster="http://comicdirector.com/img/CD_Logo.png" 
-			class="flex-center radial-bg" 
-			preload
-			tabindex="0"
-		></video>
+			<video 
+				src="https://d3914lnwxdoyzm.cloudfront.net/5189d37253d647439a671a0d401e6eaf.m4v" 
+				poster="http://comicdirector.com/img/CD_Logo.png" 
+				class="radial-bg" 
+				preload
+				tabindex="0"
+			></video>
 
+			<nav class="flexbox flex-button-bar">
+				<a id="play"><i class="icon-play"></i></a>
+				<a id="mute"><i class="icon-volume-up"></i></a>
+				<a id="fullscreen"><i class="icon-fullscreen"></i></a>
+			</nav>
+
+		</div>
 	</section>
+
+	<script type="text/javascript" src="video.js"></script>
 
 </body>
 </html>
