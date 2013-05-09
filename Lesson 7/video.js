@@ -1,7 +1,7 @@
 var video = (function(){
     'use strict';
 
-    var videoElem 		= document.getElementsByTagName('video')[0]
+    var videoElem 		= document.getElementById('custom-skin')
       , playElem 		= document.getElementById('play')
       , playIcon 		= playElem.querySelector('i')
       , muteElem 		= document.getElementById('mute')

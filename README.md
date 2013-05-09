@@ -63,7 +63,7 @@
 
 
 ## Lesson 7
-#### HTML5 Video → [Slides](http://www.rvl.io/nerdydork/lesson-7) || [demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/7/)
+#### HTML5 Video → [Slides](http://www.rvl.io/nerdydork/lesson-7) || [Native Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/7/native.html) && [Custom Skin Demo](http://ratiointeractive.github.com/Intel-DeveloperPortal_LessonCodeSamples/lesson/7/custom.html)
  - See how easy video can be
  - Adjust video options
  - Style it a bit
